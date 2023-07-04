@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $.ajax({
-        url: 'nee.html', // Path to the other HTML file
-        dataType: 'html',
-        success: function(data) {
-          $('#targetElement').html(data); // Replace 'targetElement' with the ID or class of the element where you want to insert the content
-        }
-      });
-    });
-  </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2027177183959600" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $.ajax({
+            url: 'nee.html', // Path to the other HTML file
+            dataType: 'html',
+            success: function(data) {
+            $('#targetElement').html(data); // Replace 'targetElement' with the ID or class of the element where you want to insert the content
+            }
+        });
+        });
+    </script>
 </head>
 <body>
   <div id="targetElement"></div>
