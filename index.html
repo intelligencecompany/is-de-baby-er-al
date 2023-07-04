@@ -1,34 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
-    
-    body {
-      background-color: red;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    
-    h1 {
-      font-family: 'Roboto', sans-serif;
-      color: white;
-      font-size: 150px;
-      width: 80%;
-      text-align: center;
-    }
-    
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 36px;
-      }
-    }
-  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $.ajax({
+        url: 'nee.html', // Path to the other HTML file
+        dataType: 'html',
+        success: function(data) {
+          $('#targetElement').html(data); // Replace 'targetElement' with the ID or class of the element where you want to insert the content
+        }
+      });
+    });
+  </script>
 </head>
 <body>
-  <h1>NEE</h1>
+  <div id="targetElement"></div>
 </body>
 </html>
