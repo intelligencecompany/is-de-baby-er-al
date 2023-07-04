@@ -34,39 +34,47 @@
             animation: movingBackground 10s linear infinite;
             background-size: cover;
         }
-
         
+        @keyframes movingBackground {
+            0% {
+            background-position: 0 0;
+            }
+            100% {
+            background-position: 100% 100%;
+            }
+        }
 
-    @keyframes movingBackground {
-        0% {
-        background-position: 0 0;
+        @keyframes fireworks {
+            0% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            }
+            100% {
+            transform: translateY(-500px) scale(0);
+            opacity: 0;
+            }
         }
-        100% {
-        background-position: 100% 100%;
-        }
-    }
 
-    @keyframes fireworks {
-        0% {
-        transform: translateY(0) scale(1);
-        opacity: 1;
+        .firework {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            pointer-events: none;
+            animation-name: fireworks;
+            animation-duration: 2s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
         }
-        100% {
-        transform: translateY(-500px) scale(0);
-        opacity: 0;
+        #powered-by {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: #000;
+            padding: 10px;
+            background-color: #fff;
         }
-    }
-
-    .firework {
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.8);
-        border-radius: 50%;
-        pointer-events: none;
-        animation-name: fireworks;
-        animation-duration: 2s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
-    }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4H7G0Y2PK6"></script>
@@ -209,5 +217,6 @@
 <body>
   <div id="targetElement"></div>
   <div id="fireworks-container"></div>
+  <div id="powered-by">Powered By: <a href="mailto:info@intelligencecompany.net;subject=is-de-baby-er-al.nl">info@intelligencecompany.net</a></div>
 </body>
 </html>
