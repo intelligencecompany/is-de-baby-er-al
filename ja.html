@@ -5,21 +5,32 @@
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 
     body {
-      background-color: green;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        font-family: 'Roboto', sans-serif;
     }
 
+    .text-content
+    {
+        width: 80%;
+    }
+
+    h1, h2  {
+        text-align: center;
+    }
+    
     h1 {
-      font-family: 'Roboto', sans-serif;
-      color: white;
-      font-size: 150px;
-      width: 80%;
-      text-align: center;
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 150px;
+        color: green;
+        margin-top: 10px;
     }
 
     #fireworks-container {
@@ -182,7 +193,10 @@
   </script>
 </head>
 <body>
-  <h1>JA</h1>
+<div class="text-content">
+    <h1>Is de Baby er al?</h1>
+    <h2>JA</h2>
+</div>
   <div id="fireworks-container"></div>
 </body>
 </html>
