@@ -88,8 +88,15 @@
         gtag('config', 'G-4H7G0Y2PK6');
 
         document.addEventListener('DOMContentLoaded', function() {
+            const pathname = window.location.pathname.replace("/","");
+
+            if(pathname === '' || pathname == null || pathname == undefined)
+            {
+                pathname = 'nee'
+            }
+
             var request = new XMLHttpRequest();
-            request.open('GET', 'nee.html', true);
+            request.open('GET', pathname + '.html', true);
 
             request.onload = function() {
                 if (request.status >= 200 && request.status < 400) {
